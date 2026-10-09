@@ -1,4 +1,4 @@
-name: NetTrace CI
+name: FaultTrace CI
 
 on:
   push:
@@ -30,4 +30,5 @@ jobs:
         
     - name: Test with pytest
       run: |
-        pytest test_analyzer.py -v
+        export PYTHONPATH=.
+        pytest tests/ -v
